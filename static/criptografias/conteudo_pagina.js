@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function carregar_home_page() {
+    limpar_containers()
     carregar_textos_pagina({
         'Introdução': `
         Cripythongraphy-web é a versão web de um projeto sobre criptografia que tem o intuito de traduzir ou encriptar mensagens.
