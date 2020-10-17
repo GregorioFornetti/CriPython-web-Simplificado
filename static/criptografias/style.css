@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'Public Sans Bold';
+    src: url('../PublicSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Public Sans Light';
+    src: url('../PublicSans-Light.ttf')
+}
+
+@font-face {
+    font-family: 'Public Sans Extralight';
+    src: url('../PublicSans-ExtraLight.ttf')
+}
+
+@font-face {
+    font-family: 'Public Sans Semibold';
+    src: url('../PublicSans-SemiBold.ttf')
+}
+
+@font-face {
+    font-family: 'Public Sans Thin';
+    src: url('../PublicSans-Thin.ttf')
+}
+
+.barra-navegacao {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100px;
+    background-color: rgb(64, 112, 111);
+}
+
+.link-barra-navegacao {
+    color: white;
+    text-decoration: 'none';
+    float: left;
+    text-align: center;
+    margin-top: 15px;
+    padding: 5px 16px;
+    font-family: 'Public Sans Bold', sans-serif;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.link-barra-navegacao:hover {
+    background-color: rgb(50, 88, 88);
+}
+
+.conteudo-pagina {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.triangulo {
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 22px solid rgb(182, 180, 173);
+    display: none;
+}
+
+@keyframes descendo {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 460px;
+    }
+}
+.sub-barra-navegacao {
+    position: fixed;
+    right: 2%;
+    background-color: rgb(182, 180, 173);
+    display: none;
+    z-index: 2;
+}
+
+.container-sub-barra-nav {
+    margin: 20px;
+    width: 560px;
+    background-color: snow;
+    border-radius: 20px;
+    animation-duration: 0.3s;
+    animation-name: descendo;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+
+.container-botoes-nav {
+    float: right;
+    margin-top:30px;
+    margin-right: 50px;
+}
+
+.text-container-sub-barra-nav {
+    width: 500px;
+    height: 420px;
+    padding: 10px;
+    z-index: 2;
+}
+
+.texto-sub-menu {
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size: 22px;
+    margin-left: 10px;
+    color: rgb(64, 112, 111);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.container-cadastro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    margin-left: -250px;
+    margin-top: -100px;
+    padding: 20px;
+    background-color: rgb(182, 180, 173);
+    border-radius: 12px;
+}
+
+.container-input {
+    float: right;
+    padding-bottom: 10px;
+    margin-right: 10px;
+}
+
+.texto-cadastro-label {
+    color: rgb(100, 101, 96);
+    font-size: 22px;
+    font-family: 'Public Sans Bold', sans-serif;
+    margin-right: 10px;
+}
+
+.input-cadastro {
+    width: 330px;
+    height: 22px;
+    border: 3px solid rgb(182, 180, 173);
+    font-family: 'Public Sans Light', sans-serif;
+    font-size: 16px;
+    color: rgb(100, 101, 96);
+    border-radius: 7px;
+    transition: 0.5s;
+    outline: none;
+}
+
+.input-cadastro:focus {
+    border: 3px solid rgb(140, 141, 137);
+    border-radius: 7px;
+}
+
+.submit-cadastro {
+    border: 0;
+    border-radius: 8px;
+    font-family: 'Public Sans Bold', sans-serif;
+    background-color: rgb(64, 112, 111);
+    color: white;
+    font-size: 20px;
+    color: rgb(182, 180, 173);
+    padding: 0px 30px 3.2px 30px;
+    cursor:pointer;
+    outline: none;
+}
+
+.submit-cadastro:hover {
+    background-color: rgb(96, 97, 94);
+}
+
+.container-popup-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 30px;
+    margin-left: -250px;
+    margin-top: -175px;
+    border-radius: 12px;
+    padding: 10px 10px 6px 25px;
+    display: 'none';
+}
+
+.container-popup-geral {
+    width: 500px;
+    height: 30px;
+    margin: auto;
+    border-radius: 12px;
+    padding: 10px 10px 6px 25px;
+    display: 'none';
+}
+
+.texto-popup {
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size: 20px;
+}
+
+.botao-fechar-popup {
+    font-family: 'Public Sans Thin', sans-serif;
+    font-size: 24px;
+    padding-top: -20px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0px;
+    float: right;
+}
+
+#textos-pagina {
+    font-family: 'Public Sans Extralight', sans-serif;
+    font-size: 18px;
+    color: rgb(100, 101, 96);
+}
+
+.container-textos-pagina {
+    margin: 0 auto;
+    max-width: 800px;
+    padding-bottom: 20px;
+}
+
+.titulos-pagina {
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size: 24px;
+    color: rgb(100, 101, 96);
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+.box-titulo {
+    margin: auto;
+    width: 700px;
+    padding: 10px 0px 8px 10px;
+    background-color: rgb(182, 180, 173);
+    border-radius: 0px 0px 15px 15px;
+}
+
+.box-radio-titulo {
+    float: right;
+    margin: 6px 10px 0px 0px;
+}
+
+.titulo-cifra {
+    color: white;
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+.texto-radio-titulo {
+    color: rgb(100, 101, 96);
+    font-family: 'Public Sans Semibold', sans-serif;
+    font-size: 18px;
+}
+
+.radio-cifra {
+    height: 15px;
+    width: 15px;
+}
+
+.container-cifras {
+    margin: auto;
+    width: 700px;
+}
+
+.container-input-cifra {
+    width: 700px;
+    margin-top: 25px;
+}
+
+.input-cifra {
+    height: 37px;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid rgb(182, 180, 173);
+    font-family: 'Public Sans Extralight', sans-serif;
+    font-size: 18px;
+    color: rgb(100, 101, 96);
+    padding-left: 10px;
+    outline: none;
+}
+
+.textarea_cifra {
+    border-radius: 10px 10px 0px 10px;
+    width: 100%;
+    border: 1px solid rgb(182, 180, 173);
+    font-family: 'Public Sans Extralight', sans-serif;
+    font-size: 18px;
+    color: rgb(100, 101, 96);
+    padding: 10px;
+    outline: none;
+    resize: none;
+    height: 300px;
+}
+
+.texto-cifra {
+    font-family: 'Public Sans Semibold', sans-serif;
+    font-size: 22px;
+    color: rgb(100, 101, 96);
+}
+
+#executar {
+    font-family: 'PublicSans-SemiBold', sans-serif;
+    font-size: 17px;
+    background-color: rgb(64, 112, 111);
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+    padding: 2px 17px 5px 17px;
+    outline: none;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    bottom: 5px;
+    left: 89%;
+}
