@@ -24,24 +24,61 @@
 }
 
 @media screen and (max-width: 700px) {
-    #imagem-logo {
+    #imagem-logo { /* Para celulares */
         width: 150px;
         height: 80px;
         margin-left: 30px;
         margin-top:10px;
         cursor: pointer;
     }
+
+    .link-barra-navegacao {
+        float: right; 
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .texto-sub-menu {
+        font-family: 'Public Sans Semibold', sans-serif;
+        font-size: 18px;
+        color: rgb(50, 88, 88);
+        cursor: pointer;
+    }
 }
 
 @media screen and (min-width: 701px) {
-    #imagem-logo { /* Tamanho  */
+    #imagem-logo { /* Para PC */
         width: 300px;
         height: 80px;
         margin-left: 30px;
         margin-top:10px;
         cursor: pointer;
     }
+
+    .link-barra-navegacao {
+        color: white;
+        text-decoration: 'none';
+        float: left;
+        text-align: center;
+        margin-top: 15px;
+        padding: 5px 16px;
+        font-family: 'Public Sans Bold', sans-serif;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 27px;
+        cursor: pointer;
+    }
+
+    .texto-sub-menu {
+        font-family: 'Public Sans Bold', sans-serif;
+        font-size: 22px;
+        margin: 20px;
+        color: rgb(64, 112, 111);
+        z-index: 2;
+        cursor: pointer;
+    }
 }
+
 
 .barra-navegacao {
     position: fixed;
@@ -49,20 +86,6 @@
     top: 0;
     height: 100px;
     background-color: rgb(64, 112, 111);
-}
-
-.link-barra-navegacao {
-    color: white;
-    text-decoration: 'none';
-    float: left;
-    text-align: center;
-    margin-top: 15px;
-    padding: 5px 16px;
-    font-family: 'Public Sans Bold', sans-serif;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 27px;
-    cursor: pointer;
 }
 
 .link-barra-navegacao:hover {
@@ -91,12 +114,37 @@
         height: 460px;
     }
 }
+
 .sub-barra-navegacao {
     position: fixed;
     right: 2%;
     background-color: rgb(182, 180, 173);
     display: none;
     z-index: 2;
+}
+
+.texto-titulos-sub-barra-cel {
+    font-family: 'Public Sans Bold', sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+.sub-barra-cel {
+    margin-top: 100px;
+    width: 100%;
+    padding-top: 0.1px;
+    padding-bottom: 0.1px;
+    background-color: rgb(182, 180, 173);
+}
+
+.sub-sub-barra-cel {
+    width: 100%;
+    padding-bottom: 0.1px;
+    background-color: rgb(222, 224, 222);
+}
+
+.container-sub-barra-tit-cel {
+    margin: 10px 0px 10px 20px
 }
 
 .text-container-sub-barra-nav {
@@ -115,15 +163,6 @@
     float: right;
     margin-top: 30px;
     margin-right: 50px;
-}
-
-.texto-sub-menu {
-    font-family: 'Public Sans Bold', sans-serif;
-    font-size: 22px;
-    margin: 20px;
-    color: rgb(64, 112, 111);
-    z-index: 2;
-    cursor: pointer;
 }
 
 .container-cadastro {
