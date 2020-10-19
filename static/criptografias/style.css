@@ -44,6 +44,23 @@
         color: rgb(50, 88, 88);
         cursor: pointer;
     }
+
+    .box-titulo {
+        width: 100%;
+        padding: 10px 0px 8px 10px;
+        background-color: rgb(182, 180, 173);
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .container-cifras {
+        margin-left: -10px;
+        width: 100%;
+    }
+    
+    .container-input-cifra {
+        width: 100%;
+        margin-top: 25px;
+    }
 }
 
 @media screen and (min-width: 701px) {
@@ -76,6 +93,24 @@
         color: rgb(64, 112, 111);
         z-index: 2;
         cursor: pointer;
+    }
+
+    .box-titulo {
+        margin: auto;
+        width: 700px;
+        padding: 10px 0px 8px 10px;
+        background-color: rgb(182, 180, 173);
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .container-cifras {
+        margin: auto;
+        width: 700px;
+    }
+    
+    .container-input-cifra {
+        width: 700px;
+        margin-top: 25px;
     }
 }
 
@@ -283,14 +318,6 @@
     margin-bottom: 2px;
 }
 
-.box-titulo {
-    margin: auto;
-    width: 700px;
-    padding: 10px 0px 8px 10px;
-    background-color: rgb(182, 180, 173);
-    border-radius: 0px 0px 15px 15px;
-}
-
 .box-radio-titulo {
     float: right;
     margin: 6px 10px 0px 0px;
@@ -314,15 +341,6 @@
     width: 15px;
 }
 
-.container-cifras {
-    margin: auto;
-    width: 700px;
-}
-
-.container-input-cifra {
-    width: 700px;
-    margin-top: 25px;
-}
 
 .input-cifra {
     height: 37px;
