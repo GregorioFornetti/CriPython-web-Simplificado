@@ -223,11 +223,13 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('resize', () => {
     if (innerWidth > 700 && !modo_PC) {
         limpar_elementos_CEL()
+        limpar_containers()
         criar_elementos_modo_PC()
         modo_PC = true
     } 
     else if (innerWidth < 700 && modo_PC) {
         limpar_elementos_PC()
+        limpar_containers()
         criar_elementos_modo_CEL()
         modo_PC = false
     }
