@@ -162,8 +162,10 @@ function criar_elementos_modo_CEL() {
                 else
                     document.querySelector('.sub-barra-cel').removeChild(div_cifras)
             })
-
             div_botao_cifras.append(botao_cifras)
+            // Criando barra separadora
+            let div_separador = document.createElement('div')
+            div_separador.style = 'background-color: white; width: 100%; height: 1px;'
             // Criando botão "Utilitários"
             let div_botao_utilitarios = document.createElement('div')
             div_botao_utilitarios.className = 'container-botao-sub-barra-cel'
@@ -186,6 +188,7 @@ function criar_elementos_modo_CEL() {
             div_botao_utilitarios.append(botao_utilitarios)
             // Adicionando os botões na div principal da sub-nav
             sub_barra.append(div_botao_cifras)
+            sub_barra.append(div_separador)
             sub_barra.append(div_botao_utilitarios)
             document.querySelector('body').insertBefore(sub_barra, document.querySelector('.conteudo-pagina'))
         }

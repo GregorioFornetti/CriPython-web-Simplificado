@@ -27,10 +27,6 @@ function criar_titulo(nome_titulo, traduc_encript=true) {
             separador.innerText = '|'
             container_titulo.append(separador)
         }
-        let separador = document.createElement('h')
-        separador.className = 'titulo-cifra'
-        separador.style.marginLeft ='70px'
-        separador.innerText = '|'
         // Criando texto(label) encriptação
         let texto_encript = document.createElement('h')
         texto_encript.className = 'texto-radio-titulo'
