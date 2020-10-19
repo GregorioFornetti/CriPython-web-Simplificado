@@ -57,6 +57,10 @@ function criar_titulo(nome_titulo, traduc_encript=true) {
         container_titulo.append(container_radio)
     }
     container_cifras.append(container_titulo)
+    // Criar local onde terá os formulários
+    let div_box_cifras = document.createElement('div')
+    div_box_cifras.id = 'box-cifras'
+    container_cifras.append(div_box_cifras)
 }
 
 function retornar_container_IO() {
@@ -85,7 +89,7 @@ function criar_input_padrao_texto(titulo, id_input='chave') {
     // Adicionando os novos elementos aos seus containers (divs).
     container_input.append(titulo_input)
     container_input.append(input_de_texto)
-    container_cifras.append(container_input)
+    document.querySelector('#box-cifras').append(container_input)
 }
 
 function criar_input_padrao_radio_PC(lista_titulos, name) {
@@ -105,7 +109,7 @@ function criar_input_padrao_radio_PC(lista_titulos, name) {
         // Adicionar o radio atual ao container de input atual
         container_input.append(titulo_radio)
         container_input.append(radio_opcao)
-        container_cifras.append(container_input)
+        document.querySelector('#box-cifras').append(container_input)
     }
 }
 
@@ -127,7 +131,7 @@ function criar_input_padrao_radio(lista_titulos, name) {
         container_input.append(titulo_radio)
         container_input.append(radio_opcao)
     }
-    container_cifras.append(container_input)
+    document.querySelector('#box-cifras').append(container_input)
 }
 
 function criar_input_padrao_radio_CEL(lista_titulos, name) {
@@ -145,7 +149,7 @@ function criar_input_padrao_radio_CEL(lista_titulos, name) {
         // Adicionar o radio atual ao container de input atual
         container_input.append(titulo_radio)
         container_input.append(radio_opcao)
-        container_cifras.append(container_input)
+        document.querySelector('#box-cifras').append(container_input)
     }
 }
 
@@ -174,7 +178,7 @@ function criar_textarea_input(titulo_textarea, titulo_botao, func_botao, id_text
     container_input.append(titulo_text)
     container_input.append(textarea_input)
     container_input.append(botao)
-    container_cifras.append(container_input)
+    document.querySelector('#box-cifras').append(container_input)
 }
 
 function criar_textarea_output(titulo, id_textarea='resultado') {
@@ -191,7 +195,7 @@ function criar_textarea_output(titulo, id_textarea='resultado') {
 
     container_input.append(titulo_textarea)
     container_input.append(textarea_output)
-    container_cifras.append(container_input)
+    document.querySelector('#box-cifras').append(container_input)
 }
 
 function criar_layout_padrao_cifras(titulo_cifra, func_cifra) {

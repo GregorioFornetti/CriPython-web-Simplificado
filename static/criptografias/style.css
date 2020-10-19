@@ -54,13 +54,9 @@
     }
 
     .container-cifras {
+        background-color: rgb(222, 224, 222);
         margin-top: 100px;
         width: 100%;
-    }
-    
-    .container-input-cifra {
-        width: 100%;
-        margin-top: 25px;
     }
 
     .box-radio-titulo {
@@ -104,19 +100,16 @@
     .box-titulo {
         margin: auto;
         width: 700px;
-        padding: 10px 0px 8px 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         background-color: rgb(182, 180, 173);
         border-radius: 0px 0px 15px 15px;
     }
 
     .container-cifras {
         margin: auto;
+        background-color: rgb(222, 224, 222);
         width: 700px;
-    }
-    
-    .container-input-cifra {
-        width: 700px;
-        margin-top: 25px;
     }
 
     .box-radio-titulo {
@@ -336,6 +329,11 @@
     margin-left: 10px;
 }
 
+#box-cifras {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .texto-radio-titulo {
     color: rgb(100, 101, 96);
     font-family: 'Public Sans Semibold', sans-serif;
@@ -347,7 +345,6 @@
     width: 15px;
 }
 
-
 .input-cifra {
     height: 37px;
     border-radius: 10px;
@@ -358,6 +355,11 @@
     color: rgb(100, 101, 96);
     padding: 0;
     outline: none;
+}
+
+.container-input-cifra {
+    width: 100%;
+    margin-top: 25px;
 }
 
 .textarea_cifra {
