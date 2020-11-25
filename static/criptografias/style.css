@@ -35,8 +35,8 @@
 
 @media screen and (max-width: 700px) {
     #imagem-logo { /* Para celulares */
-        margin-left: 30px;
-        margin-top:10px;
+        margin-left: 5px;
+        margin-top: 10px;
         cursor: pointer;
     }
 
@@ -44,6 +44,7 @@
         color: var(--offwhite, white);
         float: right; 
         margin-top: 50px;
+        margin-right: -35px;
         cursor: pointer;
     }
 
