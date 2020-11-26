@@ -179,9 +179,13 @@ body {
     border-radius: 0px 0px 20px 20px;
 }
 
+.texto-sub-menu:hover {
+    color: rgb(99, 98, 100);
+}
+
 .text-container-sub-barra-nav {
     margin: 15px;  /* Largura barra */
-    padding-top: 20px;
+    padding-top: 0.1px;
     width: 300px;
     background-color: var(--offwhite, white);
     border-radius: 20px;
@@ -195,7 +199,6 @@ body {
     font-family: 'Public Sans Bold', sans-serif;
     font-size: 25px;
     color: white;
-    cursor: pointer;
 }
 
 .sub-barra-cel {
@@ -212,23 +215,27 @@ body {
 }
 
 .container-botao-sub-barra-cel {
-    margin: 10px 0px 10px 20px
+    cursor: pointer;
+    padding: 10px 0px 10px 20px;
+}
+
+.container-botao-sub-barra-cel:hover {
+    background-color: rgb(83, 89, 153);
+}
+
+.container-botao-sub-sub-barra-cel {
+    cursor: pointer;
+    padding: 10px 0px 10px 20px;
+}
+
+.container-botao-sub-sub-barra-cel:hover {
+    background-color: rgb(206, 206, 206);
 }
 
 .container-botoes-nav {
     float: right;
     margin-top: 30px;
     margin-right: 50px;
-}
-
-.botao-fechar-popup {
-    font-family: 'Public Sans Thin', sans-serif;
-    font-size: 24px;
-    padding-top: -20px;
-    text-decoration: none;
-    cursor: pointer;
-    border: 0px;
-    float: right;
 }
 
 #textos-pagina {

@@ -2,55 +2,6 @@
 let botao_nav_clicado
 let modo_PC = false
 
-function retorna_lista_botoes_cifras() {
-    let botao_cesar = document.createElement('a');
-    botao_cesar.innerHTML = 'Cifra de César';
-    botao_cesar.className = 'texto-sub-menu';
-    botao_cesar.addEventListener('click', () => {
-        limpar_containers()
-        criar_menu_cifra_de_cesar()
-    })
-
-    let botao_subst_simples = document.createElement('a');
-    botao_subst_simples.innerHTML = 'Substituição simples';
-    botao_subst_simples.className = 'texto-sub-menu';
-    botao_subst_simples.addEventListener('click', () => {
-        limpar_containers()
-        criar_menu_subst_simples()
-    })
-
-    let botao_vigenere = document.createElement('a');
-    botao_vigenere.innerHTML = 'Cifra de Vigenère';
-    botao_vigenere.className = 'texto-sub-menu';
-    botao_vigenere.addEventListener('click', () => {
-        limpar_containers()
-        criar_menu_cifra_de_vigenere()
-    })
-
-    return [botao_cesar, botao_subst_simples, botao_vigenere];
-}
-
-// Criando os links/botoes do sub-menu utilitários, que serão colocados quando o botão "utilitarios" for apertado.
-function retorna_lista_botoes_utilitarios() {
-    let botao_forca_bruta_cesar = document.createElement('a');
-    botao_forca_bruta_cesar.innerHTML = 'Força bruta César';
-    botao_forca_bruta_cesar.className = 'texto-sub-menu';
-    botao_forca_bruta_cesar.addEventListener('click', () => {
-        limpar_containers()
-        criar_menu_forca_bruta_cesar()
-    })
-
-    let botao_adivinhador_cesar = document.createElement('a');
-    botao_adivinhador_cesar.innerHTML = 'Adivinhador César';
-    botao_adivinhador_cesar.className = 'texto-sub-menu';
-    botao_adivinhador_cesar.addEventListener('click', () => {
-        limpar_containers()
-        criar_menu_adivinhador_cesar()
-    })
-
-    return [botao_forca_bruta_cesar, botao_adivinhador_cesar];
-}
-
 function criar_elementos_modo_PC() {
     // Criar os elementos para resoluções maiores (monitores de computador).
     // Criar Botão "utilitarios" com triangulo invisivel em baixo (para a animação de clique)
@@ -116,9 +67,9 @@ function criar_elementos_modo_PC() {
     text_container.addEventListener('animationend', () => {
         // Adicionar os botões para as cifras/utilitários quando a animação de descida da barra acabar.
         if (botao_nav_clicado === 'cifras')
-            colocar_botoes_no_sub_menu_PC(retorna_lista_botoes_cifras())
+            colocar_botoes_no_sub_menu_PC(retorna_lista_botoes_cifras_PC())
         else
-            colocar_botoes_no_sub_menu_PC(retorna_lista_botoes_utilitarios())
+            colocar_botoes_no_sub_menu_PC(retorna_lista_botoes_utilitarios_PC())
     })
     // Adicionando a sub barra
     sub_barra.append(text_container)
@@ -143,12 +94,12 @@ function criar_elementos_modo_CEL() {
             let sub_barra = document.createElement('div')
             sub_barra.className = 'sub-barra-cel'
             // Criando botão "Cifras"
-            let div_botao_cifras = document.createElement('div')
-            div_botao_cifras.className = 'container-botao-sub-barra-cel'
+            let botao_cifras = document.createElement('div')
+            botao_cifras.className = 'container-botao-sub-barra-cel'
             
-            let botao_cifras = document.createElement('a')
-            botao_cifras.className = 'texto-titulos-sub-barra-cel'
-            botao_cifras.innerText = 'Cifras'
+            let titulo_botao_cifras = document.createElement('span')
+            titulo_botao_cifras.className = 'texto-titulos-sub-barra-cel'
+            titulo_botao_cifras.innerText = 'Cifras'
 
             botao_cifras.addEventListener('click', () => {
                 let div_cifras = document.querySelector('#div-cifras')
@@ -156,40 +107,41 @@ function criar_elementos_modo_CEL() {
                     div_cifras = document.createElement('div')
                     div_cifras.id = 'div-cifras'
                     div_cifras.className = 'sub-sub-barra-cel'
-                    colocar_botoes_no_sub_menu_CEL(retorna_lista_botoes_cifras(), div_cifras)
-                    div_botao_cifras.insertAdjacentElement('afterend', div_cifras)
+                    colocar_botoes_no_sub_menu_CEL(retorna_lista_botoes_cifras_CEL(), div_cifras)
+                    botao_cifras.insertAdjacentElement('afterend', div_cifras)
                 }
                 else
                     document.querySelector('.sub-barra-cel').removeChild(div_cifras)
             })
-            div_botao_cifras.append(botao_cifras)
+            botao_cifras.append(titulo_botao_cifras)
             // Criando barra separadora
             let div_separador = document.createElement('div')
             div_separador.style = 'background-color: white; width: 100%; height: 1px;'
             // Criando botão "Utilitários"
-            let div_botao_utilitarios = document.createElement('div')
-            div_botao_utilitarios.className = 'container-botao-sub-barra-cel'
+            let botao_utilitarios = document.createElement('div')
+            botao_utilitarios.className = 'container-botao-sub-barra-cel'
 
-            let botao_utilitarios = document.createElement('a')
-            botao_utilitarios.className = 'texto-titulos-sub-barra-cel'
-            botao_utilitarios.innerText = 'Utilitários'
+            let titulo_botao_utilitarios = document.createElement('span')
+            titulo_botao_utilitarios.className = 'texto-titulos-sub-barra-cel'
+            titulo_botao_utilitarios.innerText = 'Utilitários'
+
             botao_utilitarios.addEventListener('click', () => {
                 let div_utilitarios = document.querySelector('#div-utilitarios')
                 if (!div_utilitarios) {  // Colocar as opções de utilitarios logo abaixo do botão utilitarios.
                     div_utilitarios = document.createElement('div')
                     div_utilitarios.id = 'div-utilitarios'
                     div_utilitarios.className = 'sub-sub-barra-cel'
-                    colocar_botoes_no_sub_menu_CEL(retorna_lista_botoes_utilitarios(), div_utilitarios)
-                    div_botao_utilitarios.insertAdjacentElement('afterend', div_utilitarios)
+                    colocar_botoes_no_sub_menu_CEL(retorna_lista_botoes_utilitarios_CEL(), div_utilitarios)
+                    botao_utilitarios.insertAdjacentElement('afterend', div_utilitarios)
                 }
                 else
                     document.querySelector('.sub-barra-cel').removeChild(div_utilitarios)
             })
-            div_botao_utilitarios.append(botao_utilitarios)
+            botao_utilitarios.append(titulo_botao_utilitarios)
             // Adicionando os botões na div principal da sub-nav
-            sub_barra.append(div_botao_cifras)
+            sub_barra.append(botao_cifras)
             sub_barra.append(div_separador)
-            sub_barra.append(div_botao_utilitarios)
+            sub_barra.append(botao_utilitarios)
             document.querySelector('body').insertBefore(sub_barra, document.querySelector('.conteudo-pagina'))
         }
         else {  // Usuário clicou quando a barra já estava aberta (hora de fechar)
@@ -254,27 +206,77 @@ function reiniciar_animacao() {
 }
 
 function colocar_botoes_no_sub_menu_PC(lista_botoes) {
+    const text_container = document.querySelector('.text-container-sub-barra-nav');
     lista_botoes.forEach((botao) => {
-        const text_container = document.querySelector('.text-container-sub-barra-nav');
-        botao.addEventListener('click', () => {
-            esconder_sub_menu('')
-        })
         text_container.append(botao);
-        text_container.append(document.createElement('br'));
-        text_container.append(document.createElement('br'));
     })
 }
 
 function colocar_botoes_no_sub_menu_CEL(lista_botoes, div_botoes) {
     lista_botoes.forEach((botao) => {
-        let div_botao = document.createElement('div')
-        div_botao.className = 'container-botao-sub-barra-cel'
-        botao.addEventListener('click', () => {
-            let div_sub_barra = document.querySelector('.sub-barra-cel')
-            if (div_sub_barra)
-                document.querySelector('body').removeChild(div_sub_barra)
-        })
-        div_botao.append(botao)
-        div_botoes.append(div_botao)
+        div_botoes.append(botao)
     })
+}
+
+function retorna_lista_botoes_cifras_PC() {
+    return retorna_lista_botoes_cifras(criar_botao_modo_PC)
+}
+
+function retorna_lista_botoes_utilitarios_PC() {
+    return retorna_lista_botoes_utilitarios(criar_botao_modo_PC)
+}
+
+function retorna_lista_botoes_cifras_CEL() {
+    return retorna_lista_botoes_cifras(criar_botao_modo_CEL)
+}
+
+function retorna_lista_botoes_utilitarios_CEL() {
+    return retorna_lista_botoes_utilitarios(criar_botao_modo_CEL)
+}
+
+function retorna_lista_botoes_cifras(criar_botao) {
+    let botao_cesar = criar_botao('Cifra de César', criar_menu_cifra_de_cesar)
+    let botao_subst_simples = criar_botao('Substituição simples', criar_menu_subst_simples)
+    let botao_vigenere = criar_botao('Cifra de Vigenère', criar_menu_cifra_de_vigenere)
+
+    return [botao_cesar, botao_subst_simples, botao_vigenere];
+}
+
+function retorna_lista_botoes_utilitarios(criar_botao) {
+    let botao_forca_bruta_cesar = criar_botao('Força bruta César', criar_menu_forca_bruta_cesar)
+    let botao_adivinhador_cesar = criar_botao('Adivinhador César', criar_menu_adivinhador_cesar)
+
+    return [botao_forca_bruta_cesar, botao_adivinhador_cesar];
+}
+
+function criar_botao_modo_PC(titulo_botao, funcao_botao) {
+    let botao = document.createElement('p');
+    botao.innerHTML = titulo_botao;
+    botao.className = 'texto-sub-menu';
+    botao.addEventListener('click', () => {
+        limpar_containers()
+        funcao_botao()
+        esconder_sub_menu('')
+    })
+
+    return botao
+}
+
+function criar_botao_modo_CEL(titulo_botao, funcao_botao) {
+    let elemento_titulo_botao = document.createElement('span')
+    elemento_titulo_botao.className = 'texto-sub-menu'
+    elemento_titulo_botao.innerText = titulo_botao
+
+    let botao = document.createElement('div');
+    botao.className = 'container-botao-sub-sub-barra-cel';
+    botao.addEventListener('click', () => {
+        limpar_containers()
+        funcao_botao()
+        let div_sub_barra = document.querySelector('.sub-barra-cel')
+        if (div_sub_barra)
+            document.querySelector('body').removeChild(div_sub_barra)
+    })
+    botao.append(elemento_titulo_botao)
+
+    return botao
 }
