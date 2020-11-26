@@ -161,15 +161,6 @@ body {
     display: none;
 }
 
-@keyframes descendo {
-    from {
-        height: 0px;
-    }
-    to {
-        height: 175px;
-    }
-}
-
 .sub-barra-navegacao {
     position: fixed;
     right: 2%;
@@ -193,6 +184,15 @@ body {
     animation-name: descendo;
     animation-fill-mode: forwards;
     z-index: 2;
+}
+
+@keyframes descendo {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 175px;
+    }
 }
 
 .texto-titulos-sub-barra-cel {
