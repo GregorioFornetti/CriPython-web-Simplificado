@@ -20,7 +20,7 @@ function criar_titulo(nome_titulo, traduc_encript=true) {
         let container_radio = document.createElement('div')
         container_radio.className = 'box-radio-titulo'
         // Criar barra de separação do titulo das opções
-        if (largura_tela_atual > 700) {
+        if (largura_tela_atual > TAMANHO_MAX_CEL) {
             let separador = document.createElement('h')
             separador.className = 'titulo-cifra'
             separador.style.marginLeft ='70px'
@@ -155,7 +155,7 @@ function criar_input_padrao_radio_CEL(lista_titulos, name) {
 
 function criar_radio_padrao_cifras_utilitarios() {
     // Criar radio padrao com opções de: apenas letras e vários caracteres
-    if (window.innerWidth <= 700)
+    if (window.innerWidth <= TAMANHO_MAX_CEL)
         criar_input_padrao_radio_CEL(['apenas letras', 'vários caracteres'], 'opcoes')
     else
         criar_input_padrao_radio(['apenas letras', 'vários caracteres'], 'opcoes')

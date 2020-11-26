@@ -11,6 +11,7 @@ const LIMITE_UNICODE = 734;
 const TAMANHO_ALFABETO = 26;
 const ERRO_MENSAGEM = "Mensagem inválida !"
 const ERRO_CHAVE = "Chave inválida !"
+const TAMANHO_MAX_CEL = 850
 
 /*
 function collect_unicode_json(limite) {

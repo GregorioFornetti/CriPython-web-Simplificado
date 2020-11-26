@@ -214,7 +214,7 @@ function limpar_elementos_CEL() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth > 700) {
+    if (window.innerWidth > TAMANHO_MAX_CEL) {
         criar_elementos_modo_PC()
         modo_PC = true
     } else 
@@ -224,13 +224,13 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 window.addEventListener('resize', () => {
-    if (innerWidth > 700 && !modo_PC) {
+    if (innerWidth > TAMANHO_MAX_CEL && !modo_PC) {
         limpar_elementos_CEL()
         limpar_containers()
         criar_elementos_modo_PC()
         modo_PC = true
     } 
-    else if (innerWidth < 700 && modo_PC) {
+    else if (innerWidth < TAMANHO_MAX_CEL && modo_PC) {
         limpar_elementos_PC()
         limpar_containers()
         criar_elementos_modo_CEL()

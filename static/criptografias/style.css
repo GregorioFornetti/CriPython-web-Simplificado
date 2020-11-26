@@ -34,7 +34,7 @@
     --chumbo_complement: rgb(190, 195, 191);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
     #imagem-logo { /* Para celulares */
         /* 75% da imagem original do logo */
         width: 236px;
@@ -79,7 +79,7 @@
     
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 851px) {
     #imagem-logo { /* Para PC */
         margin-left: 30px;
         margin-top: 10px;
@@ -111,7 +111,7 @@
 
     .box-titulo {
         margin: auto;
-        width: 700px;
+        width: 850px;
         padding-top: 10px;
         padding-bottom: 10px;
         background-color: var(--chumbo, grey);
@@ -121,7 +121,7 @@
     .container-cifras {
         margin: auto;
         background-color: var(--azul_claro, grey);
-        width: 700px;
+        width: 850px;
     }
 
     .box-radio-titulo {
