@@ -158,12 +158,14 @@ function limpar_elementos_PC() {
 
 function limpar_elementos_CEL() {
     document.querySelector('.barra-navegacao').removeChild(document.querySelector('#botao-tri'))
+    limpar_sub_barra_CEL()
+}
+
+function limpar_sub_barra_CEL() {
     let div_sub_barra = document.querySelector('.sub-barra-cel')
     if (div_sub_barra)
         document.querySelector('body').removeChild(div_sub_barra)
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth > TAMANHO_MAX_CEL) {
@@ -178,14 +180,14 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('resize', () => {
     if (innerWidth > TAMANHO_MAX_CEL && !modo_PC) {
         limpar_elementos_CEL()
-        limpar_containers()
         criar_elementos_modo_PC()
+        atualizar_menu_cifras_utilits_para_modo_PC()
         modo_PC = true
     } 
-    else if (innerWidth < TAMANHO_MAX_CEL && modo_PC) {
+    else if (innerWidth <= TAMANHO_MAX_CEL && modo_PC) {
         limpar_elementos_PC()
-        limpar_containers()
         criar_elementos_modo_CEL()
+        atualizar_menu_cifras_utilits_para_modo_CEL()
         modo_PC = false
     }
 })
