@@ -1,5 +1,5 @@
 # CriPython-web-simplificado
-Cripythongraphy-web é a versão web de um projeto sobre criptografia que tem o intuito de traduzir ou encriptar mensagens.
+CriPython-web é a versão web de um projeto sobre criptografia que tem o intuito de traduzir ou encriptar mensagens.
 O usuário que estiver usando o programa tem liberdade para escolher uma das cifras disponíveis e utiliza-la
 para encriptar/traduzir um texto, podendo ver na prática como que funcionam algumas cifras. Além disso,
 nesse programa existem os utilitários, que são implementações que tentam desvendar uma mensagem encriptada
