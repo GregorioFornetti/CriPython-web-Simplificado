@@ -175,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
         criar_elementos_modo_CEL()
 
     document.querySelector('#botao-home').addEventListener('click', carregar_home_page)
+    carregar_home_page()
 })
 
 window.addEventListener('resize', () => {

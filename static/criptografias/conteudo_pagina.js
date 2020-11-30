@@ -8,22 +8,22 @@ function carregar_home_page() {
     limpar_containers()
     carregar_textos_pagina({
         'Introdução': `
-        Cripythongraphy-web é a versão web de um projeto sobre criptografia que tem o intuito de traduzir ou encriptar mensagens.
+        CriPython-web é a versão web de um projeto sobre criptografia que tem o intuito de traduzir ou encriptar mensagens.
         O usuário que estiver usando o programa tem liberdade para escolher uma das cifras disponíveis e utiliza-la
         para encriptar/traduzir um texto, podendo ver na prática como que funcionam algumas cifras. Além disso,
         nesse programa existem os utilitários, que são implementações que tentam desvendar uma mensagem encriptada
         sem a sua chave de tradução. E para finalizar, outro objetivo desse projeto é explicar um pouco sobre o assunto
         cifras de criptografia.`,
     
-        'Adicionais da versão web':`
-        Na versão web, diferente da versão desktop, é possível cadastrar uma conta para poder gravar alguns dados, como por exemplo
-        chaves padrões (que podem ser utilizadas para encriptar ou traduzir mensagens sem precisar escrever novamente a chave), temas
-        e idiomas. Ao acessar novamente sua conta, ou acessar em um computador diferente, seus dados continuarão salvos !`,
+        'Versão web simplificada':`
+        Para colocar a pagina no ar no GitHubPages, algumas coisas tiveram que ser retiradas da versão web completa, como por exemplo,
+        login e armazenamento de chaves padrões. Nessa versão é possível utilizar as cifras e utilitários normalmente.`,
     
         'Outras informações': `
-        Caso tenha interesse em conhecer a versão aplicativo desktop do Cripythongraphy, <a href='https://github.com/GregorioFornetti/Cripythongrafia'>
-        Clique aqui</a> para acessar o repositório do github desse arquivo`
-        })
+        Caso tenha interesse em conhecer a versão desktop do CriPython, <a href='https://github.com/GregorioFornetti/Cripythongrafia'>
+        Clique aqui</a> para acessar o repositório do github desse arquivo. Há também uma série de tutorias explicando cada cifra implementada
+        no programa, basta <a href='https://www.youtube.com/watch?v=FabgIHcBN3Y&list=PLN4MpuNjcYOzP4rhdNpoIJJ5VHyNiQzaI'>clicar aqui</a> para acessar a playlist de tutoriais no YouTube.`
+    })
 }
 
 function carregar_textos_pagina(textos_json) {
