@@ -8,7 +8,8 @@ cifras de criptografia.
     
 ## Versão web simplificada
 Para colocar a pagina no ar no GitHubPages, algumas coisas tiveram que ser retiradas da versão web completa, como por exemplo,
-login e armazenamento de chaves padrões. Nessa versão é possível utilizar as cifras e utilitários normalmente.
+login e armazenamento de chaves padrões. Nessa versão é possível utilizar as cifras e utilitários normalmente. Você pode acessar a pagina
+[clicando aqui](https://gregoriofornetti.github.io/CriPython-web-Simplificado/)
     
 ## Outras informações
 Caso tenha interesse em conhecer a versão desktop do CriPython,
